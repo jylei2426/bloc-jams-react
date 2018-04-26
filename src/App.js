@@ -13,7 +13,6 @@ class App extends Component {
       <header>
         <nav>
           <Link to='/'>Landing</Link>
-          <Link to='/Album'>Album</Link>
           <Link to='/library'>Library</Link>
         </nav>
         <h1>Bloc Jams</h1>
