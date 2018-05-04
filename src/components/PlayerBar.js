@@ -29,9 +29,16 @@ import React, { Component } from 'react';
          <div className="total-time">{this.props.duration}</div>
          </section>
          <section id="volume-control">
-           <div className="icon ion-volume-low"></div>
-           <input type="range" className="seek-bar" value="80" />
-           <div className="icon ion-volume-high"></div>
+           <div className="icon ion-volume-low">{this.props.volume}</div>
+           <input type="range"
+           className="seek-bar"
+           value={this.props.volume}
+           max="1"
+           min="0"
+           step="0.01"
+           onChange={this.props.handleTimeVolume}
+           />
+            <span className="icon ion-volume-high"></span>
          </section>
 
 
