@@ -98,9 +98,10 @@ class Album extends Component {
   }
 
   formatTime(timeInSeconds){
+    console.log("formatTime", timeInSeconds)
         if (typeof(timeInSeconds) === "number"){
-        const min= Math.floor(timeInSeconds / 60).toString();
-        const sec= Math.floor(timeInSeconds % 60).toString();
+        const min= Math.floor(timeInSeconds / 60);
+        const sec= Math.floor(timeInSeconds % 60);
         if(sec < 10){
      			 return min + ":0" + sec;
      		} else{
@@ -168,6 +169,7 @@ class Album extends Component {
          handlePrevClick={() => this.handlePrevClick()}
          handleNextClick={() => this.handleNextClick()}
          handleTimeChange={(e) => this.handleTimeChange(e)}
+         formatTime ={(e) => this.formatTime(e)}
          handleVolumeChange={(e)=> this.handleVolumeChange(e)}
 
        />
