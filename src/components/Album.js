@@ -98,20 +98,12 @@ class Album extends Component {
   }
 
   formatTime(timeInSeconds){
-    console.log("formatTime", timeInSeconds)
-        if (typeof(timeInSeconds) === "number"){
-        const min= Math.floor(timeInSeconds / 60);
-        const sec= Math.floor(timeInSeconds % 60);
-        if(sec < 10){
-     			 return min + ":0" + sec;
-     		} else{
-     			 return min + ":" + sec;
-          }
-          } else {
-     		return "-:--";
-     		}
-
-     }
+    if (timeInSeconds){
+        return (Math.floor(timeInSeconds / 60)) + ":" + (Math.floor(timeInSeconds % 60))
+    } else {
+        return "-:--";
+    }
+}
 
     handleVolumeChange(e) {
      const newVolume = e.target.value;
@@ -155,7 +147,7 @@ class Album extends Component {
                </button>
             </td>
             <td className="song-title">{song.title}</td>
-            <td className="song-duration">{song.duration}</td>
+            <td className="song-duration">{this.formatTime(song.duration)}</td>
             </tr>
            )}
         </tbody>
