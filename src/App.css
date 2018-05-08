@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 17px;
+  height:auto;
 }
 
 .App-logo {
@@ -16,10 +19,50 @@
 
 .App-title {
   font-size: 1.5em;
+  
 }
 
 .App-intro {
   font-size: large;
+}
+
+/*album css */
+
+#song-list{
+  text-align: center;
+   background-color:#666699;
+   border-style: dotted;
+   border-color: white;
+   margin: auto;
+}
+
+body{
+  background-color:#eee6ff;
+  margin: auto;
+}
+
+/*landing css*/
+
+.hero-title {
+  color: #6510B8;
+}
+
+.point-description{
+  color: #6510B8;
+}
+
+nav {
+  text-align: left;
+}
+
+h1{
+  font-size: 40px;
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.landing{
+font-family: 'Noto Sans', sans-serif;
 }
 
 @keyframes App-logo-spin {
